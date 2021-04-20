@@ -3,7 +3,7 @@ class Book {
     author,
     title,
   ) {
-    this.author = author;
+    this.dauthor = author;
     this.title = title;
   }
 }
