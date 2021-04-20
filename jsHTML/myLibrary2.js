@@ -1,7 +1,7 @@
 /**
  * Use template literals to output HTML
  */
-import Books from "./Books.js";
+import Books from "./Books2.js";
 
 const bookOne = new Books(
     "Francis Fukuyama",
@@ -9,19 +9,15 @@ const bookOne = new Books(
 );
 
 const content = `
-
+  <main>
+    <article>
       <ul>
         <li>Author: ${bookOne.author}</li>
         <li>Title: ${bookOne.title}</li>
       </ul>
-
+    </article>
+  </main>
 `;
 
-const main = document.querySelector(".maincontent");
-const newArticle = document.createElement("article");
-newArticle.classList.add("book");
-newArticle.setAttribute("id", "book");
-newArticle.innerHTML = content;
-
-main.append(newArticle);
+document.body.innerHTML = content;
 
